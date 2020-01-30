@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="10.25.03" ExportDate="2020-01-30T17:05:49.7665471+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="10.25.03" ExportDate="2020-01-30T17:48:24.9258001+01:00">
   <Header>
     <App Guid="f704663d-b04a-40c9-a154-8ac7b2efc8e6" />
     <Language Default="en-US" />
@@ -55,11 +55,11 @@
       <Value Key="ListPresentationTypeStaticName" Value="" Type="String" />
       <Value Key="Location" Value="Portal File System" Type="String" />
       <Value Key="Name" Value="Disqus (default)" Type="String" />
-      <Value Key="Path" Value="Disqus (default).html" Type="String" />
+      <Value Key="Path" Value="Disqus (default).cshtml" Type="String" />
       <Value Key="PresentationTypeStaticName" Value="" Type="String" />
       <Value Key="PublishData" Value="False" Type="Boolean" />
       <Value Key="StreamsToPublish" Value="Default,ListContent" Type="String" />
-      <Value Key="Type" Value="Token" Type="String" />
+      <Value Key="Type" Value="C# Razor" Type="String" />
       <Value Key="UseForList" Value="False" Type="Boolean" />
       <Value Key="ViewNameInUrl" Value="" Type="String" />
     </Entity>
