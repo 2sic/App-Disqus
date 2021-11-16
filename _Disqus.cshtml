@@ -1,12 +1,23 @@
 @inherits Custom.Hybrid.Razor12
 @{  
-  var configSuccess = Settings.DomainKey == "2sxc-org.disqus.com";
+  var configSuccess = Settings.DomainKey != "2sxc-org.disqus.com";
   // required for disqus
   var dataTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
 
   // Disable quality-check which otherwise warns 2sxc-developers that inline scripts shouldn't be used
   // 2sxclint:disable:no-inline-script
 }
+
+<div class="app-disqus2-toolbar">
+  @Edit.Toolbar(Content)
+</div>
+
+<style>
+  .app-disqus2-toolbar {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+</style>
 
 @if (!configSuccess) {
   <div class="app-disqus2-warning">@Html.Raw(Resources.ConfigurationWarning)</div>
@@ -21,6 +32,5 @@
   </style>
   return;
 }
-
 <div id="disqus_thread"></div>
 <script src="https://@(Settings.DomainKey)/embed.js" data-timestamp="@dataTimestamp"></script>
