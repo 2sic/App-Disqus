@@ -19,6 +19,8 @@ An app to integrate Disqus to your page
 | Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/snippet-inject-v3-hybrid-for-dnn-and-oqtane) #todo 2mh
 | Best Practices      | ✅    | Uses v12.05 conventions
 
+Todo: @2mh - make sure it's like the latest tables, incl. Bootstrap compatibility
+
 ## Manuals / Instructions
 
 Consult the [azing recipes](https://azing.org/2sxc/l/Mek_MCqz/app-disqus) for this
