@@ -15,11 +15,12 @@ An app to integrate Disqus to your page
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/fT9O-8LH) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/snippet-inject-v3-hybrid-for-dnn-and-oqtane) #todo 2mh
-| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/snippet-inject-v3-hybrid-for-dnn-and-oqtane) #todo 2mh
+| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/disqus-v3-hybrid-for-dnn-and-oqtane)
+| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/disqus-v3-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
-
-Todo: @2mh - make sure it's like the latest tables, incl. Bootstrap compatibility
+| Bootstrap 3         | ✅    |
+| Bootstrap 4         | ✅    |
+| Bootstrap 5         | ✅    |
 
 ## Manuals / Instructions
 
