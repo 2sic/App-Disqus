@@ -15,8 +15,8 @@ An app to integrate Disqus to your page
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/fT9O-8LH) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/disqus-v3-hybrid-for-dnn-and-oqtane)
-| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/disqus-v3-hybrid-for-dnn-and-oqtane)
+| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/disqus-app-v3-hybrid-for-dnn-and-oqtane)
+| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/disqus-app-v3-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✅    |
 | Bootstrap 4         | ✅    |
@@ -35,6 +35,6 @@ But note that you usually don't want to do this, as added snippets should just b
 
 ## History
 
-* v02.00 2021-11
+* v02.00 2022-03
     * Upgrade to v12.05 conventions
     * Switched all injects to use Razor
