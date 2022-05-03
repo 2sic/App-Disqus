@@ -4,6 +4,9 @@
 
   // Disable quality-check which otherwise warns 2sxc-developers that inline scripts shouldn't be used
   // 2sxclint:disable:no-inline-script
+
+  // Page Service for CSP
+  var page = GetService<IPageService>();
 }
 
 <div class="app-disqus2-toolbar">
@@ -36,7 +39,7 @@
   <div id="disqus_thread_loader">@Html.Raw(Resources.DisqusLoadingMessage)</div>
 </div>
 
-<script>
+<script @(page.CspWhitelistAttribute)>
   let disqusObserver = new IntersectionObserver((entries) => {
     // start loading Disqus now
     if(entries[0].isIntersecting) {
@@ -52,6 +55,7 @@
 
   function addDisqusScript() {
     let disqusScript = document.createElement('script')
+    disqusScript.setAttribute();
     disqusScript.src = 'https://@(App.Settings.DomainKey)/embed.js'
     disqusScript.setAttribute('data-timestamp', +new Date());
     (document.head || document.body).appendChild(disqusScript)
