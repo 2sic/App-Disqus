@@ -39,7 +39,7 @@
   <div id="disqus_thread_loader">@Html.Raw(Resources.DisqusLoadingMessage)</div>
 </div>
 
-<script @(page.CspWhitelistAttribute)>
+<script @(page.AssetAttributes())>
   let disqusObserver = new IntersectionObserver((entries) => {
     // start loading Disqus now
     if(entries[0].isIntersecting) {
