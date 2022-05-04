@@ -1,4 +1,5 @@
 @inherits Custom.Hybrid.Razor12
+@using ToSic.Sxc.Services
 @{  
   var configSuccess = Settings.DomainKey == "2sxc-org.disqus.com";
 
@@ -55,7 +56,6 @@
 
   function addDisqusScript() {
     let disqusScript = document.createElement('script')
-    disqusScript.setAttribute();
     disqusScript.src = 'https://@(App.Settings.DomainKey)/embed.js'
     disqusScript.setAttribute('data-timestamp', +new Date());
     (document.head || document.body).appendChild(disqusScript)
