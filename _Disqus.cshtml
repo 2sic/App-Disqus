@@ -9,7 +9,7 @@
   // 2sxclint:disable:no-inline-script
 
   // Page Service for CSP
-  var page = GetService<IPageService>();
+  var pageSvc = GetService<IPageService>();
 }
 
 <div class="app-disqus2-toolbar">
@@ -38,4 +38,4 @@
 }
 
 <div id="disqus_thread"></div>
-<script src="https://@(Settings.DomainKey)/embed.js" @(page.AssetAttributes(position:"bottom" )) data-timestamp="@dataTimestamp"></script>
+<script src="https://@(Settings.DomainKey)/embed.js" @pageSvc.AssetAttributes(position:"bottom" ) data-timestamp="@dataTimestamp"></script>

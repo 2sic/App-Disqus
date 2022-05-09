@@ -7,7 +7,7 @@
   // 2sxclint:disable:no-inline-script
 
   // Page Service for CSP
-  var page = GetService<IPageService>();
+  var pageSvc = GetService<IPageService>();
 }
 
 <div class="app-disqus2-toolbar">
@@ -40,7 +40,7 @@
   <div id="disqus_thread_loader">@Html.Raw(Resources.DisqusLoadingMessage)</div>
 </div>
 
-<script @(page.AssetAttributes())>
+<script @pageSvc.AssetAttributes()>
   let disqusObserver = new IntersectionObserver((entries) => {
     // start loading Disqus now
     if(entries[0].isIntersecting) {
