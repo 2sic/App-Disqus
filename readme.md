@@ -38,3 +38,5 @@ But note that you usually don't want to do this, as added snippets should just b
 * v02.00 2022-03
     * Upgrade to v12.05 conventions
     * Switched all injects to use Razor
+* v02.01 2022-05
+    * Moved inline scripts to files for CSP

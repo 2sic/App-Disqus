@@ -1,13 +1,14 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Sxc.Services
 @{  
-  var configSuccess = Settings.DomainKey == "2sxc-org.disqus.com";
+  var configSuccess = Settings.DomainKey != "2sxc-org.disqus.com";
 
   // Disable quality-check which otherwise warns 2sxc-developers that inline scripts shouldn't be used
   // 2sxclint:disable:no-inline-script
 
   // Page Service for CSP
   var pageSvc = GetService<IPageService>();
+  pageSvc.Activate("turnOn");
 }
 
 <div class="app-disqus2-toolbar">
@@ -40,24 +41,8 @@
   <div id="disqus_thread_loader">@Html.Raw(Resources.DisqusLoadingMessage)</div>
 </div>
 
-<script @pageSvc.AssetAttributes()>
-  let disqusObserver = new IntersectionObserver((entries) => {
-    // start loading Disqus now
-    if(entries[0].isIntersecting) {
-      // enter disqus config here
-
-      addDisqusScript()
-      // once executed, stop observing
-      disqusObserver.disconnect()
-    }
-  }, { threshold: [0] });
-
-  disqusObserver.observe(document.querySelector("#disqus_thread"))
-
-  function addDisqusScript() {
-    let disqusScript = document.createElement('script')
-    disqusScript.src = 'https://@(App.Settings.DomainKey)/embed.js'
-    disqusScript.setAttribute('data-timestamp', +new Date());
-    (document.head || document.body).appendChild(disqusScript)
-  }
-</script>
+<script src="@App.Path/src/js/index.js" @pageSvc.AssetAttributes()></script>
+<turnOn turn-on='{
+  "run": "window.appDisqus3.initPro()",
+  "data": { "domainKey": "@App.Settings.DomainKey" }
+}'></turnOn>
