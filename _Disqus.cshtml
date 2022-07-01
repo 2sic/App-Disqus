@@ -1,15 +1,8 @@
-@inherits Custom.Hybrid.Razor12
-@using ToSic.Sxc.Services
+@inherits Custom.Hybrid.Razor14
 @{  
   var configSuccess = Settings.DomainKey != "2sxc-org.disqus.com";
   // required for disqus
   var dataTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
-
-  // Disable quality-check which otherwise warns 2sxc-developers that inline scripts shouldn't be used
-  // 2sxclint:disable:no-inline-script
-
-  // Page Service for CSP
-  var pageSvc = GetService<IPageService>();
 }
 
 <div class="app-disqus2-toolbar">
@@ -38,4 +31,4 @@
 }
 
 <div id="disqus_thread"></div>
-<script src="https://@(Settings.DomainKey)/embed.js" @pageSvc.AssetAttributes(position:"bottom" ) data-timestamp="@dataTimestamp"></script>
+<script src="https://@(Settings.DomainKey)/embed.js" @Kit.Page.AssetAttributes(position: "bottom") data-timestamp="@dataTimestamp"></script>

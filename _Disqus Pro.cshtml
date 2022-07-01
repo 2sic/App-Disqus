@@ -1,14 +1,7 @@
-@inherits Custom.Hybrid.Razor12
-@using ToSic.Sxc.Services
+@inherits Custom.Hybrid.Razor14
 @{  
   var configSuccess = Settings.DomainKey != "2sxc-org.disqus.com";
-
-  // Disable quality-check which otherwise warns 2sxc-developers that inline scripts shouldn't be used
-  // 2sxclint:disable:no-inline-script
-
-  // Page Service for CSP
-  var pageSvc = GetService<IPageService>();
-  pageSvc.Activate("turnOn");
+  Kit.Page.Activate("turnOn");
 }
 
 <div class="app-disqus2-toolbar">
@@ -41,7 +34,7 @@
   <div id="disqus_thread_loader">@Html.Raw(Resources.DisqusLoadingMessage)</div>
 </div>
 
-<script src="@App.Path/src/js/index.js" @pageSvc.AssetAttributes()></script>
+<script src="@App.Path/src/js/index.js" @Kit.Page.AssetAttributes()></script>
 <turnOn turn-on='{
   "run": "window.appDisqus3.initPro()",
   "data": { "domainKey": "@App.Settings.DomainKey" }

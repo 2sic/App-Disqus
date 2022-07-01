@@ -40,3 +40,6 @@ But note that you usually don't want to do this, as added snippets should just b
     * Switched all injects to use Razor
 * v02.01 2022-05
     * Moved inline scripts to files for CSP
+* v02.02 2022-06
+    * Changed all base classes to their 2sxc 14 equivalents 
+    * Changed from GetService<> to the new ServiceKit14
