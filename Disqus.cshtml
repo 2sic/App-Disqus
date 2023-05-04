@@ -5,8 +5,7 @@
   var dataTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
 }
 
-<div class="app-disqus2-toolbar">
-  @Edit.Toolbar(Content)
+<div class="app-disqus2-toolbar" @Kit.Toolbar.Default(Content)>
 </div>
 
 <style>

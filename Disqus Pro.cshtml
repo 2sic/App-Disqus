@@ -1,11 +1,15 @@
 @inherits Custom.Hybrid.Razor14
 @{  
   var configSuccess = Settings.DomainKey != "2sxc-org.disqus.com";
-  Kit.Page.Activate("turnOn");
+
+  var data = new {
+    domainKey = Settings.DomainKey
+  };
+
 }
 
-<div class="app-disqus2-toolbar">
-  @Edit.Toolbar(Content)
+
+<div class="app-disqus2-toolbar" @Kit.Toolbar.Default(Content)>
 </div>
 
 <style>
@@ -15,7 +19,7 @@
   }
 </style>
 
-<div id="disqus_thread" @Edit.TagToolbar(Content)>
+<div id="disqus_thread" @Kit.Toolbar.Default(Content)>
   @if(!configSuccess) {
     <div class="app-disqus2-warning">@Html.Raw(Resources.ConfigurationWarning)</div>
     <style>
@@ -35,7 +39,5 @@
 </div>
 
 <script src="@App.Path/src/js/index.js" @Kit.Page.AssetAttributes()></script>
-<turnOn turn-on='{
-  "run": "window.appDisqus3.initPro()",
-  "data": { "domainKey": "@App.Settings.DomainKey" }
-}'></turnOn>
+ @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
+

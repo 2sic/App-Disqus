@@ -8,7 +8,7 @@ An app to integrate Disqus to your page
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v13.10
+| 2sxc                | ✅    | requires 2sxc v16.0
 | Dnn                 | ✅    | For v7, v8 and v9
 | Oqtane 2            | ✅    | Requires v2.02
 | No jQuery           | ✅    | 
@@ -36,10 +36,13 @@ But note that you usually don't want to do this, as added snippets should just b
 ## History
 
 * v02.00 2022-03
-    * Upgrade to v12.05 conventions
-    * Switched all injects to use Razor
+  * Upgrade to v12.05 conventions
+  * Switched all injects to use Razor
 * v02.01 2022-05
-    * Moved inline scripts to files for CSP
+  * Moved inline scripts to files for CSP
 * v02.02 2022-06
-    * Changed all base classes to their 2sxc 14 equivalents 
-    * Changed from GetService<> to the new ServiceKit14
+  * Changed all base classes to their 2sxc 14 equivalents 
+  * Changed from GetService<> to the new ServiceKit14
+* v02.03.00 2023-05
+  * Removed _ from Filenames
+  * Replaced turnOn Tag with `Kit.Page.TurnOn`
