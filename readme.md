@@ -8,9 +8,9 @@ An app to integrate Disqus to your page
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16.0
-| Dnn                 | ✅    | For v7, v8 and v9
-| Oqtane 2            | ✅    | Requires v2.02
+| 2sxc                | ✅    | requires 2sxc v16.02
+| Dnn                 | ✅    | For v9.6.1+
+| Oqtane 2            | ✅    | Requires v3.04+
 | No jQuery           | ✅    | 
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/fT9O-8LH) on [azing.org](https://azing.org/2sxc)
@@ -46,3 +46,7 @@ But note that you usually don't want to do this, as added snippets should just b
 * v02.03.00 2023-05
   * Removed _ from Filenames
   * Replaced turnOn Tag with `Kit.Page.TurnOn`
+* v02.04.00 2023-07
+  * 2sxc 16.02 coding conventions
+  * everything typed
+  

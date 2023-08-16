@@ -1,11 +1,12 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorTyped
 @{  
-  var configSuccess = Settings.DomainKey != "2sxc-org.disqus.com";
+  var disqus = MyItem;
+  var configSuccess = App.Settings.String("DomainKey") != "2sxc-org.disqus.com";
   // required for disqus
   var dataTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
 }
 
-<div class="app-disqus2-toolbar" @Kit.Toolbar.Default(Content)>
+<div class="app-disqus2-toolbar" @Kit.Toolbar.Default(disqus)>
 </div>
 
 <style>
@@ -16,7 +17,7 @@
 </style>
 
 @if (!configSuccess) {
-  <div class="app-disqus2-warning">@Html.Raw(Resources.ConfigurationWarning)</div>
+  <div class="app-disqus2-warning">@Html.Raw(App.Resources.String("ConfigurationWarning"))</div>
   <style>
     .app-disqus2-warning {
       color: #856404;
@@ -30,4 +31,4 @@
 }
 
 <div id="disqus_thread"></div>
-<script src="https://@(Settings.DomainKey)/embed.js" @Kit.Page.AssetAttributes(position: "bottom") data-timestamp="@dataTimestamp"></script>
+<script src="https://@(App.Settings.String("DomainKey"))/embed.js" @Kit.Page.AssetAttributes(position: "bottom") data-timestamp="@dataTimestamp"></script>
