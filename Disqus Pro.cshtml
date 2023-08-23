@@ -37,6 +37,6 @@
   <div id="disqus_thread_loader">@Html.Raw(App.Resources.String("DisqusLoadingMessage"))</div>
 </div>
 
-<script src="@App.Path/src/js/index.js" @Kit.Page.AssetAttributes()></script>
+<script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script>
  @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
 
