@@ -8,16 +8,6 @@
 
 }
 
-<div class="app-disqus2-toolbar" @Kit.Toolbar.Default(disqus)>
-</div>
-
-<style>
-  .app-disqus2-toolbar {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-</style>
-
 <div id="disqus_thread" @Kit.Toolbar.Default(disqus)>
   @if (!configSuccess) {
     <div class="app-disqus2-warning">@Html.Raw(App.Resources.String("ConfigurationWarning"))</div>
@@ -37,6 +27,5 @@
   <div id="disqus_thread_loader">@Html.Raw(App.Resources.String("DisqusLoadingMessage"))</div>
 </div>
 
-<script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script>
- @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
+<script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script> @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
 

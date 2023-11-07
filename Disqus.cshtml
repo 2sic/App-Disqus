@@ -6,18 +6,8 @@
   var dataTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
 }
 
-<div class="app-disqus2-toolbar" @Kit.Toolbar.Default(disqus)>
-</div>
-
-<style>
-  .app-disqus2-toolbar {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-</style>
-
 @if (!configSuccess) {
-  <div class="app-disqus2-warning">@Html.Raw(App.Resources.String("ConfigurationWarning"))</div>
+  <div class="app-disqus2-warning" @Kit.Toolbar.Default(disqus)>@Html.Raw(App.Resources.String("ConfigurationWarning"))</div>
   <style>
     .app-disqus2-warning {
       color: #856404;
@@ -30,5 +20,5 @@
   return;
 }
 
-<div id="disqus_thread"></div>
+<div id="disqus_thread" @Kit.Toolbar.Default(disqus)></div>
 <script src='https://@App.Settings.String("DomainKey")/embed.js' @Kit.Page.AssetAttributes(position: "bottom") data-timestamp="@dataTimestamp"></script>
