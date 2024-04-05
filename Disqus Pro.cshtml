@@ -1,16 +1,17 @@
-@inherits Custom.Hybrid.RazorTyped
+@inherits AppCode.Razor.AppRazor
+@using AppCode.Data
 @{  
   var disqus = MyItem;
-  var configSuccess = App.Settings.String("DomainKey") != "2sxc-org.disqus.com";
+  var configSuccess = App.Settings.DomainKey != "2sxc-org.disqus.com";
   var data = new {
-    domainKey = App.Settings.String("DomainKey")
+    domainKey = App.Settings.DomainKey
   };
 
 }
 
 <div id="disqus_thread" @Kit.Toolbar.Default(disqus)>
   @if (!configSuccess) {
-    <div class="app-disqus2-warning">@Html.Raw(App.Resources.String("ConfigurationWarning"))</div>
+    <div class="app-disqus2-warning">@Html.Raw(App.Resources.ConfigurationWarning)</div>
     <style>
       .app-disqus2-warning {
         color: #856404;
@@ -24,7 +25,7 @@
     </style>
     return;
   }
-  <div id="disqus_thread_loader">@Html.Raw(App.Resources.String("DisqusLoadingMessage"))</div>
+  <div id="disqus_thread_loader">@Html.Raw(App.Resources.DisqusLoadingMessage)</div>
 </div>
 
 <script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script> @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
