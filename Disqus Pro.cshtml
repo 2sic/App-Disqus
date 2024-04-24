@@ -1,16 +1,8 @@
 @inherits AppCode.Razor.AppRazor
 @using AppCode.Data
-@{  
-  var disqus = MyItem;
-  var configSuccess = App.Settings.DomainKey != "2sxc-org.disqus.com";
-  var data = new {
-    domainKey = App.Settings.DomainKey
-  };
 
-}
-
-<div id="disqus_thread" @Kit.Toolbar.Default(disqus)>
-  @if (!configSuccess) {
+<div id="disqus_thread" @Kit.Toolbar.Default(MyItem)>
+  @if (!(App.Settings.DomainKey != "2sxc-org.disqus.com")) {
     <div class="app-disqus2-warning">@Html.Raw(App.Resources.ConfigurationWarning)</div>
     <style>
       .app-disqus2-warning {
@@ -28,5 +20,6 @@
   <div id="disqus_thread_loader">@Html.Raw(App.Resources.DisqusLoadingMessage)</div>
 </div>
 
-<script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script> @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
+<script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script> 
+@Kit.Page.TurnOn("window.appDisqus3.initPro()",data: new { domainKey = App.Settings.DomainKey })
 

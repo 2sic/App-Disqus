@@ -1,14 +1,8 @@
 @inherits AppCode.Razor.AppRazor
 @using AppCode.Data
-@{  
-  var disqus = MyItem;
-  var configSuccess = App.Settings.DomainKey != "2sxc-org.disqus.com";
-  // required for disqus
-  var dataTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
-}
 
-@if (!configSuccess) {
-  <div class="app-disqus2-warning" @Kit.Toolbar.Default(disqus)>@Html.Raw(App.Resources.ConfigurationWarning)</div>
+@if (!(App.Settings.DomainKey != "2sxc-org.disqus.com")) {
+  <div class="app-disqus2-warning" @Kit.Toolbar.Default(MyItem)>@Html.Raw(App.Resources.ConfigurationWarning)</div>
   <style>
     .app-disqus2-warning {
       color: #856404;
@@ -21,5 +15,7 @@
   return;
 }
 
-<div id="disqus_thread" @Kit.Toolbar.Default(disqus)></div>
-<script src='https://@App.Settings.DomainKey/embed.js' @Kit.Page.AssetAttributes(position: "bottom") data-timestamp="@dataTimestamp"></script>
+<div id="disqus_thread" @Kit.Toolbar.Default(MyItem)></div>
+<script src='https://@App.Settings.DomainKey/embed.js' 
+  @Kit.Page.AssetAttributes(position: "bottom") data-timestamp="@DateTimeOffset.Now.ToUnixTimeSeconds()">
+</script>
