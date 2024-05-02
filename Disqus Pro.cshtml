@@ -1,16 +1,13 @@
-@inherits Custom.Hybrid.RazorTyped
-@{  
-  var disqus = MyItem;
-  var configSuccess = App.Settings.String("DomainKey") != "2sxc-org.disqus.com";
-  var data = new {
-    domainKey = App.Settings.String("DomainKey")
-  };
+@inherits AppCode.Razor.AppRazor
+@using AppCode.Data
 
-}
-
-<div id="disqus_thread" @Kit.Toolbar.Default(disqus)>
-  @if (!configSuccess) {
-    <div class="app-disqus2-warning">@Html.Raw(App.Resources.String("ConfigurationWarning"))</div>
+<div id="disqus_thread" @Kit.Toolbar.Default(MyItem)>
+  @* Show warning if still in initial configuration *@
+  @if (App.Settings.DomainKey == "2sxc-org.disqus.com")
+  {
+    <div class="app-disqus2-warning">
+      @Html.Raw(App.Resources.ConfigurationWarning)
+    </div>
     <style>
       .app-disqus2-warning {
         color: #856404;
@@ -22,10 +19,12 @@
         justify-content: space-between;
       }
     </style>
-    return;
   }
-  <div id="disqus_thread_loader">@Html.Raw(App.Resources.String("DisqusLoadingMessage"))</div>
+  @* Show disqus with the DomainKey *@
+  else
+  {
+    <div id="disqus_thread_loader">@Html.Raw(App.Resources.DisqusLoadingMessage)</div>
+    <script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script> 
+    @Kit.Page.TurnOn("window.appDisqus3.initPro()",data: new { domainKey = App.Settings.DomainKey })
+  }
 </div>
-
-<script src="@App.Folder.Url/src/js/index.js" @Kit.Page.AssetAttributes()></script> @Kit.Page.TurnOn("window.appDisqus3.initPro()", data: data)
-

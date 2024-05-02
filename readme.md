@@ -6,11 +6,11 @@
 
 An app to integrate Disqus to your page
 
-| Aspect              | Status | Comments or Version |
-| ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16.04
+| Aspect              | Status | Comments or Version
+| ------------------- | :----: | -------------------
+| 2sxc                | ✅    | requires 2sxc v17.07.00
 | Dnn                 | ✅    | For v9.6.1+
-| Oqtane 2            | ✅    | Requires v04.00+
+| Oqtane              | ✅    | Requires v04.00+
 | No jQuery           | ✅    | 
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/fT9O-8LH) on [azing.org](https://azing.org/2sxc)
@@ -49,4 +49,6 @@ But note that you usually don't want to do this, as added snippets should just b
 * v02.04.00 2023-07
   * 2sxc 16.02 coding conventions
   * everything typed
-  
+* v02.17.00 2024-04
+  * strong Typed
+  * Auto Generated Class
