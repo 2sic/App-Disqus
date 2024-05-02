@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-29T16:13:12.8314347+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="17.07.00" ExportDate="2024-05-02T10:34:44.9732742+02:00">
   <Header>
     <App Guid="93b09530-ccc7-499b-8871-d3cda14aad82" />
     <Language Default="en-us" />
@@ -212,6 +212,9 @@
       <Value Key="AllowTokenTemplates" Value="True" Type="Boolean">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
+      <Value Key="DebugLog" Value="" Type="String">
+        <Dimension DimensionID="192" ReadOnly="false" />
+      </Value>
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
@@ -233,13 +236,13 @@
       <Value Key="RequiredOqtaneVersion" Value="04.00.00" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
+      <Value Key="RequiredVersion" Value="17.07.00" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.04.00" Type="String">
+      <Value Key="Version" Value="03.17.00" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
     </Entity>
@@ -247,21 +250,18 @@
       <Value Key="DomainKey" Value="2sxc-org.disqus.com" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
-      <Value Key="DomainKey" Value="2sxc-org.disqus.com" Type="String">
-        <Dimension DimensionID="191" ReadOnly="false" />
-      </Value>
     </Entity>
     <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="f5f8895e-5e0a-4ce4-817f-7995c2ec75a8" KeyNumber="15">
-      <Value Key="ConfigurationWarning" Value="&lt;div&gt;&#xA;&lt;div&gt;You have just added the app - please configure it now. Here are some &lt;a href=&quot;https://azing.org/2sxc/l/Mek_MCqz/app-disqus&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;recipes &lt;/a&gt;to get you started.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
+      <Value Key="ConfigurationWarning" Value="&lt;div&gt;&#xA;&lt;div&gt;You have just added the app - please configure it now. Here are some &lt;a href=&quot;https://azing.org/2sxc/l/Mek_MCqz/app-disqus&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;recipes &lt;/a&gt;to get you started.&lt;br&gt;As long as you use the default path in the system settings, you will see the warning.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
-      <Value Key="ConfigurationWarning" Value="&lt;div&gt;&#xA;&lt;div&gt;You have just added the app - please configure it now. Here are some &lt;a href=&quot;https://azing.org/2sxc/l/Mek_MCqz/app-disqus&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;recipes &lt;/a&gt;to get you started.&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
+      <Value Key="ConfigurationWarning" Value="&lt;div&gt;&#xA;&lt;div&gt;Sie haben die App gerade hinzugef&amp;uuml;gt - bitte konfigurieren Sie sie jetzt. Hier sind einige &lt;a href=&quot;https://azing.org/2sxc/l/Mek_MCqz/app-disqus&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Cecklisten&lt;/a&gt;&amp;nbsp;f&amp;uuml;r den Anfang.&lt;br&gt;&lt;br&gt;Solange du den Default Pfad in den System Settings verwendest, siehts du die Warnung&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
         <Dimension DimensionID="191" ReadOnly="false" />
       </Value>
       <Value Key="DisqusLoadingMessage" Value="&lt;div&gt;&#xA;&lt;div&gt;Loading Comments...&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
-      <Value Key="DisqusLoadingMessage" Value="&lt;div&gt;&#xA;&lt;div&gt;Loading Comments...&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
+      <Value Key="DisqusLoadingMessage" Value="&lt;div&gt;&#xA;&lt;div&gt;Kommentare laden...&lt;/div&gt;&#xA;&lt;/div&gt;" Type="String">
         <Dimension DimensionID="191" ReadOnly="false" />
       </Value>
     </Entity>
@@ -505,6 +505,9 @@
       <Value Key="UrlParametersCaseSensitive" Value="False" Type="Boolean">
         <Dimension DimensionID="192" ReadOnly="false" />
       </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="1c51ff0b-0429-4712-8ec8-617c58d9bd80" Json="True">
+      <Value Key="Template" Value="0c0f1051-2cff-4c8a-8b95-c69b43f9081f" Type="Entity" />
     </Entity>
   </Entities>
   <PortalFiles />
