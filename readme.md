@@ -52,3 +52,5 @@ But note that you usually don't want to do this, as added snippets should just b
 * v02.17.00 2024-04
   * strong Typed
   * Auto Generated Class
+* v02.17.01 2024-07
+  * Update app.sln and app.csproj
